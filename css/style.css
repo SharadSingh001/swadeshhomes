@@ -60,11 +60,16 @@ body{
   right: 10px;
 }
 .logo{
-	float:left;
+  position: fixed;
+  top: 10px;
+  left: 10px;
 	
 }
 .top-menu{
-	float:right;
+	  position: fixed;
+      top: 10px;
+      right: 10px;
+
 }
 .top-menu ul li{
 	display: inline-block;
