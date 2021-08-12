@@ -52,6 +52,12 @@ body{
 }
 .header-top {
 	padding-top: 15px;
+	float:none;
+}
+.donate-button {
+  position: fixed;
+  top: 100px;
+  right: 10px;
 }
 .logo{
 	float:left;
