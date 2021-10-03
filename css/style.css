@@ -77,7 +77,7 @@ body{
 }
 .top-menu ul li a{
 	font-size: 1.1em;
-	color: #fff;
+	color: #888;
 	text-decoration: none;
 	text-transform: uppercase;
 	
@@ -258,17 +258,17 @@ ul.wmuSliderPagination {
 	padding-top: 30px;
 	text-align: center;
 }
-.works-section{
+.exhibits-section{
 	padding:3em 0;
 	background:#2e3e4e;
 	
 }
-.works-header{
+.exhibits-header{
 	text-align: center;
 	width: 85%;
 	margin: 0 auto;
 }
-.works-header h3
+.exhibits-header h3
 {
 	font-size: 2.5em;
 	font-family: 'Arvo', serif;
@@ -276,10 +276,10 @@ ul.wmuSliderPagination {
 	font-weight: 400;
 	color: #ef664d;
 }
-.works-header h3 span {
+.exhibits-header h3 span {
 	color: #fefefe;
 }
-.works-header p{
+.exhibits-header p{
 	line-height: 1.5em;
 	
 	font-size: 15px;
@@ -317,60 +317,46 @@ ul.wmuSliderPagination {
 	bottom: 52%;
 	margin: -10px 0;
 }
-.project-name{
-	border-bottom:1px solid #FFF1CE;
+.projects-section{
+	padding:3em 0;
+	background:#2e3e4e;
+
 }
-.project-name span{
-	color: #FFF1CE;
-	font-weight: 300;
-	font-size: 15px;
-	margin-bottom: 0.6em;
+.projects-header{
+	text-align: center;
+	width: 85%;
+	margin: 0 auto;
+}
+.projects-header h3
+{
+	font-size: 2.5em;
+	font-family: 'Arvo', serif;
 	text-transform: uppercase;
-	display: block;
+	font-weight: 400;
+	color: #ef664d;
 }
-.portfolio-section-top-row {
-	padding: 1em 0 4em 0;
+.projects-header h3 span {
+	color: #fefefe;
 }
-.portfolio-section-top-row-left-grid {
-	padding: 0;
-}
-.project-name h3{
-	color:#fff;
-	font-weight:700;
-	font-size:1.5em;
-	margin-bottom: 1em;
-}
-.project-description ul {
-	margin: 0 0 14px 59px;
-}
-.project-description span{
-	color: #FFF1CE;
-	font-weight: 300;
-	font-size: 15px;
-	margin: 1em 0;
-	display: block;
+.projects-header h2
+{
+	font-size: 1.5em;
+	font-family: 'Arvo', serif;
 	text-transform: uppercase;
+	font-weight: 400;
+	color: #ef664d;
 }
-.project-description ul li{
-	color:#fff;
+.projects-header h2 span {
+	color: #fefefe;
 }
-.project-description ul li a{
-	color:#fff;
-	font-size:15px;
-	font-weight:300;
-	margin: 6px 0;
-	list-style-type: disc;
-}
-.project-description p{
-	color: #fff;
-	font-weight: 300;
+.projects-header p{
+	line-height: 1.5em;
+
 	font-size: 15px;
-	line-height: 1.8em;
-	margin-bottom: 1.5em;
+	color: #fefefe;
+	padding: 25px 0;
 }
-.project-description{
-	border-bottom:1px solid #FFF1CE;
-}
+
 .address span{
 	color: #FFF1CE;
 	font-weight: 300;
@@ -638,43 +624,43 @@ h2.resp-accordion {
 	padding-top: 15px;
 	text-align: center;
 }
-.about-section {
+.mission-section {
 	padding:3em 0;
 }
-.about-header {
+.mission-header {
 	text-align: center;
 }
-.about-header h3 {
+.mission-header h3 {
 	font-size: 2.5em;
 	font-family: 'Arvo', serif;
 	text-transform: uppercase;
 	font-weight: 400;
 	color: #2a404e;
 }
-.about-header h3 span {
+.mission-header h3 span {
 	color: #ef664d;;
 
 }
-.about-imag {
+.mission-imag {
 	float: left;
 	width:27%;
 	margin-right:5%
 }
-.about-imag img {
+.mission-imag img {
 	border: 2px solid #ef664d;
 	border-radius: 103px;
 }
-.about-text {
+.mission-text {
 	float: center;
 	width: 85%;
 	margin-top:3%; 
 }
-.about-text p {
+.mission-text p {
 	font-size: 15px;
 	color: #7e7e7e;
 	line-height: 1.5em;
 }
-.about-sectiongrids{
+.mission-sectiongrids{
 	padding: 40px 0px;
 }
 .polls {
@@ -880,6 +866,32 @@ padding-bottom: 2em;
 	text-indent: 100%;
 	background: url("../images/to-top2.png") no-repeat 0px 0px;
 }
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:nth-child(odd){background-color: #ffffff}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ffaa00;
+  color: white;
+}
+
     
        /*-- responsive-mediaquries --*/
 		@media(max-width:1080px){
@@ -915,13 +927,22 @@ padding-bottom: 2em;
 			.services-grid p {
 			   font-size: 1em;
 			}
-			.works-header h3 {
+			.exhibits-header h3 {
 				font-size: 2.2em;
 			}
-			.works-header {
+			.exhibits-header {
 				width: 100%;
 			}
-			.works-header p {
+			.exhibits-header p {
+				font-size: 1em;
+			}
+			.projects-header h3 {
+				font-size: 2.2em;
+			}
+			.projects-header {
+				width: 100%;
+			}
+			.projects-header p {
 				font-size: 1em;
 			}
 			#filters {
@@ -933,10 +954,10 @@ padding-bottom: 2em;
 			.grid_box a:hover .zoom-icon {
 				top:10px;
 			}
-			.about-header h3 {
+			.mission-header h3 {
 			    font-size: 2.2em;
 			}
-			.about-text p{
+			.mission-text p{
 				font-size:1em;
 			}
 			.poll-desc h4 {
@@ -1020,13 +1041,22 @@ padding-bottom: 2em;
 				
 			}
 		
-           	.works-section {
-				padding: 2em 0;
+           	.exhibits-section {
+				padding: 1.5em 0;
 			}
-			.works-header h3 {
+			.exhibits-header h3 {
 				font-size: 2em;
 			}
-			.works-header p {
+			.exhibits-header p {
+				padding: 15px 0;
+			}
+           	.projects-section {
+				padding: 2em 0;
+			}
+			.projects-header h3 {
+				font-size: 2em;
+			}
+			.projects-header p {
 				padding: 15px 0;
 			}
 			#filters {
@@ -1035,20 +1065,20 @@ padding-bottom: 2em;
 			.grid_box a:hover .zoom-icon {
 				top: -17px;
 			}
-			.about-section {
+			.mission-section {
 				padding: 2em 0;
 			}
-			.about-header h3 {
+			.mission-header h3 {
 				font-size: 2em;
 			}
-			.about-imag img {
+			.mission-imag img {
 				width: 80%;
 			}
-			.about-text p {
+			.mission-text p {
 				height: 65px;
 				overflow: hidden;
 			}
-			.about-sectiongrids {
+			.mission-sectiongrids {
 				padding: 25px 0px;
 			}
 			.arrow1 {
@@ -1199,26 +1229,32 @@ padding-bottom: 2em;
 			width: 55%;
 			margin: 0 auto;
 		}
-		.works-section {
-			padding: 1.5em 0;
-		}
-		.works-header h3 {
+		.exhibits-header h3 {
 			font-size: 1.5em;
 		}
-		.works-header p {
+		.exhibits-header p {
+			font-size: 0.9em;
+		}
+		.projects-section {
+			padding: 1.5em 0;
+		}
+		.projects-header h3 {
+			font-size: 1.5em;
+		}
+		.projects-header p {
 			font-size: 0.9em;
 		}
 		.grid_box a:hover .zoom-icon {
 			top: -30px;
 		}
-		.about-text p {
+		.mission-text p {
 			height: 46px;
 			overflow: hidden;
 		}
-		.about-header h3 {
+		.mission-header h3 {
 			font-size: 1.5em;
 		}
-		.about-imag img {
+		.mission-imag img {
 			width: 70%;
 		}
 		.poll-desc h4 {
@@ -1228,7 +1264,7 @@ padding-bottom: 2em;
 			font-size: 15px;
 		}
 		.footer-section {
-		padding: 20px 0px;
+		padding: 15px 0px;
 		}
 		.contact-header h3 {
 		font-size: 1.5em;
@@ -1343,15 +1379,29 @@ padding-bottom: 2em;
 		.services-grid p {
 			width: 70%;
 		}
-		.works-header h3 {
+		.exhibits-header h3 {
 			font-size: 1.4em;
 		}
-		.works-header p {
+		.exhibits-header p {
 			
 			height: 66px;
 			overflow: hidden;
 		}
-		.works-header p {
+		.exhibits-header p {
+			padding: 10px 0;
+		}
+		.projects-header h3 {
+			font-size: 1.4em;
+		}
+		.projects-header h2 {
+			font-size: 1em;
+		}
+		.projects-header p {
+
+			height: 66px;
+			overflow: hidden;
+		}
+		.projects-header p {
 			padding: 10px 0;
 		}
 		.resp-tab-item {
@@ -1366,13 +1416,13 @@ padding-bottom: 2em;
 		{
 			top:30%;
 		}
-		.about-header h3 {
+		.mission-header h3 {
 			font-size: 01.4em;
 		}
-		.about-imag img {
+		.mission-imag img {
 			width: 90%;
 		}
-		.about-text {
+		.mission-text {
 			float: left;
 			width: 64%;
 			margin-top: 4%;
@@ -1477,10 +1527,13 @@ padding-bottom: 2em;
 			margin: 0 auto;
 			padding: 0 0px;
 		}
-		.works-section {
+		.exhibits-section {
 			padding: 1em 0;
 		}
-		
+		.projects-section {
+			padding: 1em 0;
+		}
+
 		.b-animate{
 			width: 45%;
 		}
@@ -1500,26 +1553,23 @@ padding-bottom: 2em;
 			padding: 3px 0px 0px 6px;
 		}
 		
-		.about-section {
-			padding: 1em 0;
-		}
-		.about-text p {
+		.mission-text p {
 			height: 37px;
 			overflow: hidden;
 			font-size: 0.9em;
 		}
-		.about-imag {
+		.mission-imag {
 			width: 30%;
 			margin-right: 5%;
 		}
-		.about-text {
+		.mission-text {
 			width: 61%;
 			margin-top: 4%;
 		}
-		.about-imag img {
+		.mission-imag img {
 			width: 100%;
 		}
-		.about-sectiongrids {
+		.mission-sectiongrids {
 			padding: 15px 0px;
 		}
 		.poll-desc h4 {
@@ -1527,9 +1577,6 @@ padding-bottom: 2em;
 		}
 		.percentage p {
 			font-size: 13px;
-		}
-		.footer-section {
-			padding: 15px 0px;
 		}
 		.social-icon {
 			padding: 10px 0;
