@@ -28,19 +28,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header" id="head">
     	<div class="container">
         	<div class="header-top">
+				<!--script-nav-->
+				<script>
+				$("span.menu").click(function(){
+				$(".top-menu ul").slideToggle("slow" , function(){
+				});
+				});
+		 		</script>
+				<div class="clearfix"></div>
 				<div class="logo">
 					<a href="index.html"><img src="images/SwadeshHomesLogo.jpg" alt="" width="100px" height="100px" /></a>
 			 	</div>
 		   		<div class="top-menu">
 		   			<span class="menu"> </span>
 					<ul>
-			 			<nav class="cl-effect-5">
 							<li><a class="active" href="index.html"><span data-hover="Home">home</span></a></li>
-							<li><a href="#about" class="scroll"><span data-hover="about">about</span></a></li>
-							<li><a href="#work" class="scroll"><span data-hover="work"><span>work</span></a></li>
+							<li><a href="#mission" class="scroll"><span data-hover="mission">mission</span></a></li>
+							<li><a href="#exhibit" class="scroll"><span data-hover="exhibits">exhibits</span></a></li>
 							<li><a href="#services" class="scroll"><span data-hover="services">services</span></a></li>
+							<li><a href="#projects" class="scroll"><span data-hover="projects">projects</span></a></li>
 							<li><a href="#contact" class="scroll"><span data-hover="contact">contact</span></a></li>
-						</nav>
 					</ul>
 			 	</div>
 				<div class="donate-button">
@@ -54,42 +61,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</li>
 					</ul>
 				</div>
-				<!--script-nav-->
-		 		<script>
-				$("span.menu").click(function(){
-				$(".top-menu ul").slideToggle("slow" , function(){
-				});
-				});
-		 		</script>
-				<div class="clearfix"></div>
 			</div>
 		</div>
-		<div class="index-banner">
-       		<div class="wmuSlider example1">
-				<div class="wmuSliderWrapper">
-					<article style="position: absolute; width: 100%; opacity: 0;">
-				   		<div class="banner-wrap">
-				       		<div class="banner_center">
-					 			<h1>If you have a piece of land, let’s build a home for you…</h1>
-				 			</div>
-						</div>
-					</article>
-				 </div>
-            </div>
-            <script src="js/jquery.wmuSlider.js"></script> 
-			<script>
-       			$('.example1').wmuSlider();         
-   		     </script> 	           	      
-      	</div>
 	</div>
 
 	<div class="content">
-		<div class="about-section" id="about" id="about">
+		<div class="mission-section" id="mission" id="mission">
 			<div class="container">
-				<div class="about-header">
+				<div class="mission-header">
 					<h3>Mission Statement</h3>
 					<center>
-						<div class="about-text">
+						<div class="mission-text">
 							<p>If you have a place you can call “Home”, you will have the will and courage to venture out and face any challenges life throws at you. As you face the challenges, you will have peace of mind that at the end of the day, you will be relaxing at the comfort of your home…</p>
 							<br>
 							<p>There are many in society who have not been as fortunate. Even though they have a piece of land, they don’t have the resources or time to build a home on their property</p>
@@ -104,16 +86,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"></div>
 			</div>
 			<div class="arrow1">
-	    		<a href="#work" class="scroll"><img src="images/arrow1.png" alt=""/></a>
+	    		<a href="#exhibit" class="scroll"><img src="images/arrow1.png" alt=""/></a>
 			</div>
 		</div>
 	</div>
-	<!-- about-section-ends -->
+	<!-- mission-section-ends -->
 
-	<div class="works-section" id="work" id="work">
-		<div class="works-header">
-			<h3>works</h3>
-				<p>An exhibit of our work in progress...</p>
+	<div class="exhibits-section" id="exhibit" id="exhibit">
+		<div class="exhibits-header">
+			<h3>Exhibits</h3>
+				<p>An exhibit of our completed and work in progress...</p>
 	    </div>
 		<div class="portfolio-section-bottom-row" id="portfolio">
 			<div class="container">
@@ -141,7 +123,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 						<ul class="resp-tabs-list">
 							<li class="resp-tab-item" aria-controls="tab_item-4" role="tab"><span>Photography</span></li>
-							<div class="clearfix"></div>
 						</ul>
 						<div id="portfoliolist">
 							<div class="resp-tabs-container">
@@ -192,7 +173,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="services-header">
 				<h3>services</h3>
-					<p>Our services include but not be limited to, planning, financing and construction of homes. Participation in this program will be voluntary and within the constraints of local laws. </p>
+					<p>Our services include but not be limited to, planning, financing and construction of homes.</p>
 			</div>
 			<div class="services-sectiongrids">
 				<div class="col-md-4 services-grid">
@@ -218,6 +199,76 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!-- services-section-ends -->
+	<div class="projects-section" id="projects">
+		<div class="container">
+			<div class="projects-header">
+				<h3>projects</h3>
+				<p>Participation in this program will be voluntary and within the constraints of local laws.
+					We will strive to help 5 to 10 families with construction of their homes each year.
+				</p>
+				<br>
+				<p>Phase 1 of this initiatives starts in December 2021, with the following list of candidates who have expressed an need for assistance
+				</p>
+				<h2>Phase 1 Candidates</h2>
+				<br>
+
+				<table id="customers">
+					<tr>
+						<th>Candidate</th>
+						<th>Description of property and home to be built</th>
+						<th>Location</th>
+					</tr>
+					<tr>
+						<td><b>Saroj and Shyamsundar</b></td>
+						<td>Home already build. Requires plaster on walls and new bathroom</td>
+						<td>Mawayia, Sarnath, Varanasi</td>
+					</tr>
+					<tr>
+						<td><b>Basant</b> (Shyamsundar's brother)</td>
+						<td>New home to be built on a 900 Sq ft property. Property is shared by Basant and Ajay</td>
+						<td>Mawayia, Sarnath, Varanasi</td>
+					</tr>
+					<tr>
+						<td><b>Ajay</b> (Shyamsundar's brother)</td>
+						<td>New home to be built on a 900 Sq ft property. Property is shared by Basant and Ajay</td>
+						<td>Mawayia, Sarnath, Varanasi</td>
+					</tr>
+					<tr>
+						<td><b>Arjun</b> (Shyamsundar's brother)</td>
+						<td>First floor to be built on a 120 Sq ft property. Ground floor already built</td>
+						<td>Mawayia, Sarnath, Varanasi</td>
+					</tr>
+					<tr>
+						<td><b>Savera</b> (Saroj's brother)</td>
+						<td>New home to be built on a 100 Sq ft property. </td>
+						<td>Shivpurw, Maduadhi, Varanasi</td>
+					</tr>
+					<tr>
+						<td><b>Asish</b> (Saroj's brother)</td>
+						<td>New home to be built on a 100 Sq ft property. </td>
+						<td>Shivpurw, Maduadhi, Varanasi</td>
+					</tr>
+					<tr>
+						<td><b>Rekha</b> (Saroj's sister-in-law)</td>
+						<td>New home to be built on a 800 Sq ft property shared between Rekha, Jivan and Ramji. </td>
+						<td>SMawayia, Sarnath, Varanasi</td>
+					</tr>
+					<tr>
+						<td><b>Jivan</b> (Rekha's brother-in-law)</td>
+						<td>New home to be built on a 800 Sq ft property shared between Rekha, Jivan and Ramji. </td>
+						<td>SMawayia, Sarnath, Varanasi</td>
+					</tr>
+					<tr>
+						<td><b>Ramji</b> (Rekha's brother-in-law)</td>
+						<td>New home to be built on a 800 Sq ft property shared between Rekha, Jivan and Ramji. </td>
+						<td>SMawayia, Sarnath, Varanasi</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- project-section-ends -->
+
 	<div class="footer-section" id="contact" id="contact">
 		<div class="container">
 			<div class="contact-header">
