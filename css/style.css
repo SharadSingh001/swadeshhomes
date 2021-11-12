@@ -41,14 +41,15 @@ body{
     margin-right: 5px;
 }
 .header{
-	background: url("../images/Construction1.jpg") no-repeat center top;
+	background: url("../images/Housing_banner.jpg") no-repeat center top;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	background-position: center;
 	background-size:cover;
-	min-height: 550px;
+	min-height: 400px;
+
 }
 .header-top {
 	padding-top: 15px;
@@ -77,7 +78,7 @@ body{
 }
 .top-menu ul li a{
 	font-size: 1.1em;
-	color: #888;
+	color: #666;
 	text-decoration: none;
 	text-transform: uppercase;
 	
@@ -215,6 +216,7 @@ ul.wmuSliderPagination {
 }
 .services-section{
 	padding:3em 0;
+	background:#1e2e3e;
 }
 .services-header{
 	text-align: center;
@@ -260,8 +262,6 @@ ul.wmuSliderPagination {
 }
 .exhibits-section{
 	padding:3em 0;
-	background:#2e3e4e;
-	
 }
 .exhibits-header{
 	text-align: center;
@@ -319,7 +319,8 @@ ul.wmuSliderPagination {
 }
 .projects-section{
 	padding:3em 0;
-	background:#2e3e4e;
+	background:#1e2e3e;
+
 
 }
 .projects-header{
@@ -356,6 +357,7 @@ ul.wmuSliderPagination {
 	color: #fefefe;
 	padding: 25px 0;
 }
+
 
 .address span{
 	color: #FFF1CE;
@@ -619,6 +621,7 @@ h2.resp-accordion {
 }
 .img-top img {
     width: 100%;
+
 }
 .arrow {
 	padding-top: 15px;
@@ -697,7 +700,7 @@ h2.resp-accordion {
 }
 .footer-section {
 	padding: 40px 0px;
-	background: #2e3e4e;
+	background: #4e5e6e;
 }
 .contact-header {
 	text-align: center;
@@ -888,7 +891,7 @@ padding-bottom: 2em;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #ffaa00;
+  background-color: #7e8e9e;
   color: white;
 }
 
