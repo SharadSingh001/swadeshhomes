@@ -239,7 +239,7 @@ th {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: #aaa !important;
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -315,6 +315,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  max-height: 450px;
 }
 .img-rounded {
   border-radius: 6px;
@@ -1117,6 +1118,7 @@ pre code {
   }
   .col-md-3 {
     width: 25%;
+
   }
   .col-md-2 {
     width: 16.66666667%;
