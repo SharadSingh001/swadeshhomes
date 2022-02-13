@@ -69,35 +69,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="mission-section" id="mission">
 			<div class="container">
 				<div class="mission-header">
-					<table>
-						<tr>
-							<td width="70%">
-								<h3>Mission Statement</h3>
-								<center>
-									<div class="mission-text">
-										<p><b>Home ownership is the cornerstone of a strong community...</b></p>
-										<br>
-										<p>If you have a place you can call “Home”, you will have the will and courage to venture out and face any challenges life throws at you. As you face the challenges, you will have peace of mind that at the end of the day, you will be relaxing at the comfort of your home…</p>
-										<br>
-										<p>There are many in society who have not been as fortunate. Even though they have a piece of land, they don’t have the resources or time to build a home on their property</p>
-										<br>
-										<p><b>Swadesh Homes is committed to helping the impoverished in India realize their dream of home ownership.</b></p>
-										<br>
-										<p>Our goal is to identify and target specifically those individuals and families who have a piece of land but have not been able to build a home on their property. Swadesh Homes will help them by building a house which provides the basic comforts that all human being deserve</p>
-									</div>
-								</center>
-							</td>
-							<td width="30%">
-								<div class="videoContent">
-									<!-- Use a button to pause/play the video with JavaScript -->
-									<button id="myBtn" onclick="videoFunction()">Play Video</button>
-								</div>
-									<video loop id="SwadeshHomesAdVideo">
-										<source src="images/SwadeshHomesAd.mp4" type="video/mp4">
-									</video>
-							</td>
-						</tr>
-					</table>
+					<h3>Mission Statement</h3>
+					<center>
+						<div class="mission-text">
+							<p>If you have a place you can call “Home”, you will have the will and courage to venture out and face any challenges life throws at you. As you face the challenges, you will have peace of mind that at the end of the day, you will be relaxing at the comfort of your home…</p>
+							<br>
+							<p>There are many in society who have not been as fortunate. Even though they have a piece of land, they don’t have the resources or time to build a home on their property</p>
+							<br>
+							<p>Our initiative is to identify and target specifically those individuals and families that have a piece of land but have not been able to build a home on their property, and help them get a house built which they can call “Home”</p>
+							<br>
+							<p>For the first phase, we will start small by helping a small group of people who we directly know. Depending on the success level of the first phase, we will expand the initiative to others in subsequent phases </p>
+						</div>
+					</center>
 					<div class="clearfix"></div>
 				</div>
 				<div class="clearfix"></div>
@@ -148,88 +131,87 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="exhibits-section" id="exhibit">
 		<div class="exhibits-header">
 			<h3>Exhibits</h3>
+				<p>An exhibit of our completed and work in progress...</p>
 	    </div>
-		<h2 style="text-align:center">Photo Gallery</h2>
+		<div class="portfolio-section-bottom-row" id="portfolio">
+			<div class="container">
 
-		<div class="container">
-			<div class="mySlides">
-				<div class="numbertext">1 / 20</div>
-				<img src="images/Construction1.jpg" style="height:400px">
-			</div>
-
+				<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+				<script type="text/javascript">
+					$(document).ready(function () {
+						$('#horizontalTab').easyResponsiveTabs({
+							type: 'default', //Types: default, vertical, accordion
+							width: 'auto', //auto or any width like 600px
+							fit: true   // 100% fit in a container
+						});
+					});
 			<div class="mySlides">
 				<div class="numbertext">2 / 20</div>
-				<img src="images/Construction2.jpg" style="height:400px">
+				<img src="images/DemolitionPic1.jpg" style="height:400px">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext">3 / 20</div>
-				<img src="images/Construction3.jpg" style="height:400px">
+				<img src="images/DemolitionPic2.jpg" style="height:400px">
 			</div>
+				</script>
+				<link rel="stylesheet" href="css/swipebox.css">
+				<script src="js/jquery.swipebox.min.js"></script>
+				<script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+				</script>
 
-			<div class="mySlides">
-				<div class="numbertext">4 / 20</div>
-				<img src="images/FoundationPic1.jpg" style="height:400px">
-			</div>
+				<div class="sap_tabs">
+					<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+						<ul class="resp-tabs-list">
+							<li class="resp-tab-item" aria-controls="tab_item-4" role="tab"><span>Work in progress</span></li>
+						</ul>
+						<div id="portfoliolist">
+							<div class="resp-tabs-container">
+								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+									<div class="tab_img">
+										<div class="col-md-3 img-top grid_box">
+											<a href="images/Saroja.jpg" class="swipebox"  title="Image Title">
+												<img src="images/Saroja.jpg" class="img-responsive" alt="">
+												<span class="zoom-icon"></span>
+											</a>
+										</div>
+										<div class="col-md-3 img-top grid_box">
+											<a href="images/Construction2.jpg" class="swipebox"  title="Image Title">
+												<img src="images/Construction2.jpg" class="img-responsive" alt="">
+												<span class="zoom-icon"></span>
+											</a>
+										</div>
+										<div class="col-md-3 img-top grid_box">
+											<a href="images/Construction3.jpg" class="swipebox"  title="Image Title">
+												<img src="images/Construction3.jpg" class="img-responsive" alt="">
+												<span class="zoom-icon"></span>
+											</a>
+										</div>
+										<div class="col-md-3 img-top grid_box">
+											<a href="images/WaterWell.jpg" class="swipebox"  title="Water Well Boring">
+												<img src="images/WaterWell.jpg" class="img-responsive" alt="">
+												<span class="zoom-icon"></span>
+											</a>
+										</div>
+										<div class="clearfix"></div>
+									</div>
 
-			<div class="mySlides">
-				<div class="numbertext">5 / 20</div>
-				<img src="images/FoundationPic2.jpg" style="height:400px">
-			</div>
-
-			<div class="mySlides">
-				<div class="numbertext">6 / 20</div>
-				<img src="images/FoundationPic3.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">7 / 20</div>
-				<img src="images/FoundationPic4.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">8 / 20</div>
-				<img src="images/StairsPic1.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">9 / 20</div>
-				<img src="images/ShutteringPic1.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">10 / 20</div>
-				<img src="images/ShutteringPic2.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">11 / 20</div>
-				<img src="images/ShutteringPic3.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">12 / 20</div>
-				<img src="images/CastingPic1.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">13 / 20</div>
-				<img src="images/CastingPic2.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">14 / 20</div>
-				<img src="images/CastingPic3.jpg" style="height:400px">
-			</div>
-
-			<a class="prev" onclick="plusSlides(-1)">❮</a>
-			<a class="next" onclick="plusSlides(1)">❯</a>
-
-			<div class="caption-container">
-				<p id="caption"></p>
-			</div>
-
+								</div>
+							</div>
+						</div>
+					</div>
 			<div class="row">
 				<div class="column">
 					<img class="demo cursor" src="images/Construction1.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
 				</div>
 				<div class="column">
-					<img class="demo cursor" src="images/Construction2.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+					<img class="demo cursor" src="images/DemolitionPic1.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
 				</div>
 				<div class="column">
-					<img class="demo cursor" src="images/Construction3.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+					<img class="demo cursor" src="images/DemolitionPic2.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
 				</div>
 				<div class="column">
 					<img class="demo cursor" src="images/FoundationPic1.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
@@ -246,34 +228,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="column">
 					<img class="demo cursor" src="images/StairsPic1.jpg" style="width:100%" onclick="currentSlide(8)" alt="">
 				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/ShutteringPic1.jpg" style="width:100%" onclick="currentSlide(9)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/ShutteringPic2.jpg" style="width:100%" onclick="currentSlide(10)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/ShutteringPic3.jpg" style="width:100%" onclick="currentSlide(11)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/CastingPic1.jpg" style="width:100%" onclick="currentSlide(12)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/CastingPic2.jpg" style="width:100%" onclick="currentSlide(13)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/CastingPic3.jpg" style="width:100%" onclick="currentSlide(14)" alt="">
+				<div class="arrow">
+					<a href="#projects" class="scroll"><img src="images/arrow.png" alt=""/></a>
 				</div>
 			</div>
-		</div>
-		<script>
-			var slideIndex = 1;
-			showSlides(slideIndex);
-
-		</script>
-
-		<div class="arrow">
-			<a href="#projects" class="scroll"><img src="images/arrow.png" alt=""/></a>
 		</div>
 	</div>
 	<!-- portfolio-section-ends -->
@@ -286,9 +244,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					We will strive to help 5 to 10 families with construction of their homes each year.
 				</p>
 				<br>
-				<p>Phase 1 of this initiative started in October 2021, with the following list of candidates who have expressed a need for assistance
+				<p>Phase 1 of this initiatives starts in November 2021, with the following list of candidates who have expressed a need for assistance
 				</p>
-				<h2>Candidates</h2>
+				<h2>Phase 1 Candidates</h2>
 				<br>
 
 				<table id="customers">
@@ -296,73 +254,61 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<th >Candidate</th>
 						<th>Description of property and home to be built</th>
 						<th>Location</th>
-						<th>Status</th>
 					</tr>
 					<tr>
 						<td><b>Saroj and Shyamsundar</b></td>
 						<td>Home already build. Requires renovation and new bathroom</td>
 						<td>Mavaiya, Sarnath, Varanasi</td>
-						<td>In progress</td>
 					</tr>
 					<tr>
 						<td><b>Basant Lal</b> (Shyamsundar's brother)</td>
 						<td>New home to be built on a 900 Sq ft property. Property is shared by Ajay, Basant and Munnar</td>
 						<td>Mavaiya, Sarnath, Varanasi</td>
-						<td>Design ready. Construction pending</td>
 					</tr>
 					<tr>
 						<td><b>Munnar Rajbhar & Sunita Devi</b> (Shayamsundar's brother)</td>
 						<td>New home to be built on a 900 Sq ft property. Property is shared by Ajay, Basant and Munnar</td>
 						<td>Mavaiya, Sarnath, Varanasi</td>
-						<td>Design ready. Construction pending</td>
 					</tr>
 					<tr>
 						<td><b>Ajay Rajbhar & Nitu</b> (Shayamsundar's brother)</td>
 						<td>New home to be built on a 900 Sq ft property. Property is shared by Ajay, Basant and Munnar</td>
 						<td>Mavaiya, Sarnath, Varanasi</td>
-						<td>Design ready. Construction pending</td>
 					</tr>
 					<tr>
 						<td><b>Savera</b> (Saroj's brother)</td>
 						<td>New home to be built on a 100 Sq ft property.</td>
 						<td>Shivpurw, Maduadhi, Varanasi</td>
-						<td>Not started</td>
 					</tr>
 					<tr>
 						<td><b>Asish</b> (Saroj's brother)</td>
 						<td>New home to be built on a 100 Sq ft property.</td>
 						<td>Shivpurw, Maduadhi, Varanasi</td>
-						<td>Not started</td>
 					</tr>
 					<tr>
 						<td><b>Rekha Devi & Lakshman Rajbhar</b></td>
 						<td>Will be given 1 of 5 new flats to be built on a 1400 Sq ft property</td>
 						<td>Mavaiya, Sarnath, Varanasi</td>
-						<td>In progress</td>
 					</tr>
 					<tr>
 						<td><b>Jeevan Lal & Rinku Devi</b> (Rekha's family)</td>
 						<td>Will be given 1 of 5 new flats to be built on a 1400 Sq ft propertyn</td>
 						<td>Mavaiya, Sarnath, Varanasi</td>
-						<td>In progress</td>
 					</tr>
 					<tr>
 						<td><b>Bharat Rajbhar & Sunita Devi</b> (Rekha's family)</td>
 						<td>Will be given 1 of 5 new flats to be built on a 1400 Sq ft property</td>
 						<td>Mavaiya, Sarnath, Varanasi</td>
-						<td>In progress</td>
 					</tr>
 					<tr>
 						<td><b>Arjun & Soni Dev</b> (Rekha's family)</td>
 						<td>Will be given 1 of 5 new flats to be built on a 1400 Sq ft property</td>
 						<td>Mavaiya, Sarnath, Varanasi</td>
-						<td>In progress</td>
 					</tr>
 					<tr>
 						<td><b>Ramji Rajbhar</b> (Rekha's family)</td>
 						<td>Will be given 1 of 5 new flats to be built on a 1400 Sq ft property</td>
 						<td>Mavaiya, Sarnath, Varanasi</td>
-						<td>In progress</td>
 					</tr>
 				</table>
 				<div class="arrow">
@@ -376,18 +322,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="footer-section" id="contact">
 		<div class="container">
 			<div class="contact-header">
-				<h3>contact</h3>
-				<h4>For making a contribution</h4>
-				<p>
-					Click on the "Donate" button at the top right of this page and follow directions<br><br>
-					OR<br><br>
-					Send a check to the following address and make the check payable to "<b>Swadesh Homes Inc</b>"<br>
-					<br>
-					18 Haverford Road<br>
-					West Windsor, NJ 08550<br>
-				</p>
-				<h4>To find out more about this organization send a message using the form below, and we will contact you as soon as possible.</h4>
+				<h3> contact</h3>
+					<p>To find out more about this organization send a message using the form below, and we will contact you as soon as possible.</p>
 			</div>
+			<!--
+			<div class="social-icon">
+				<a href="#"><i class="icon1"></i></a>
+				<a href="#"><i class="icon2"></i></a>
+				<a href="#"><i class="icon3"></i></a>
+				<a href="#"><i class="icon4"></i></a>
+				<a href="#"><i class="icon5"></i></a>
+				<a href="#"><i class="icon6"></i></a>
+				<a href="#"><i class="icon7"></i></a>
+				<a href="#"><i class="icon8"></i></a>
+			</div>
+			-->
 			<div class="contact">
 				<form class="contact-info">
 					<div class="col-md-4 contactgrid">
