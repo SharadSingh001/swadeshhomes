@@ -510,6 +510,7 @@ img {
   opacity: 1;
 }
 
+
 /**** Slider *****/
 .wmuSlider {
 	position: relative;
@@ -921,7 +922,7 @@ padding:30px 0;
 }
 .contact {
 	padding-bottom:4em;
-b   order-bottom: 1px solid#55626f;
+    border-bottom: 1px solid#55626f;
 }
 .contactgrid {
 padding-bottom: 2em;
