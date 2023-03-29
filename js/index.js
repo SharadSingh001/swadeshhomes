@@ -13,12 +13,12 @@ function getInfo(){
 	console.log(phone);
 	console.log(message);
 
-	var link = "mailto:swadeshhomesinc@gmail.com"
-             + "?cc=sharadsingh001@yahoo.com"
-             + "&subject=" + encodeURIComponent("Swadesh Homes Contact Request")
+	var link = "mailto:info@swadeshhomes.org"
+             + "?cc=sharad@swadeshhomes.org"
+             + "&subject=" + encodeURIComponent("Swadesh Homes Foundation Contact Request")
              + "&body=" + encodeURIComponent("Name: " + name + "\n" + "Email: " + email + "\n" + "Phone: " + phone + "\n\n" + "Message: " + message)
     ;
-    
+
     window.location.href = link;
 }
 

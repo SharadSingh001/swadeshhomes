@@ -214,17 +214,17 @@ ul.wmuSliderPagination {
 	width:23%;
 	float:left;
 }
-.services-section{
+.AboutUs-section{
 	padding:3em 0;
 	background:#1e2e3e;
 }
-.services-header{
+.AboutUs-header{
 	text-align: center;
 	width: 85%;
 	margin: 0 auto;
 
 }
-.services-header h3
+.AboutUs-header h3
 {
 	font-size: 2.5em;
 	font-family: 'Arvo', serif;
@@ -232,26 +232,26 @@ ul.wmuSliderPagination {
 	font-weight: 400;
 	color: #2a404e;
 }
-.services-header h3 span {
+.AboutUs-header h3 span {
 	color: #F0C514;
 }
-.services-header p{
+.AboutUs-header p{
 	line-height: 1.5em;
 	font-size: 15px;
 	color: #7e7e7e;
 	padding: 25px 0;
 }
-.services-sectiongrids {
+.AboutUs-sectiongrids {
 	text-align: center;
 }
-.services-grid h4 {
+.AboutUs-grid h4 {
 	font-size: 1.3em;
 	font-weight: bold;
 	padding: 15px 0;
 	color: #2a404e;
 	text-transform: uppercase;
 }
-.services-grid p {
+.AboutUs-grid p {
 	font-size: 15px;
 	color: #7e7e7e;
 	padding: 0 22px;
@@ -1074,19 +1074,19 @@ padding-bottom: 2em;
 			.wmuSliderNext {
 				top: 195px;
 			}
-			.services-header h3 {
+			.AboutUs-header h3 {
 				font-size: 2.2em;
 			}
-			.services-header {
+			.AboutUs-header {
 				width: 100%;
 			}
-			.services-header p {
+			.AboutUs-header p {
 				font-size: 1em;
 			}
-			.services-grid h4 {
+			.AboutUs-grid h4 {
 			   font-size: 1.2em;
 			}
-			.services-grid p {
+			.AboutUs-grid p {
 			   font-size: 1em;
 			}
 			.exhibits-header h3 {
@@ -1181,24 +1181,24 @@ padding-bottom: 2em;
 			.banner-wrap {
 				padding-top: 16em;
 			}
-			.services-section {
+			.AboutUs-section {
 				padding: 2em 0;
 			}
-			.services-header h3 {
+			.AboutUs-header h3 {
 				font-size: 2em;
 			}
-			.services-grid {
+			.AboutUs-grid {
 				padding: 20px 0;
 				float: left;
 				width: 33.3%;
 			}
-			.services-grid img {
+			.AboutUs-grid img {
 				width: 35%;
 			}
-			.services-grid {
+			.AboutUs-grid {
 				padding: 20px 0;
 			}
-			.services-header p {
+			.AboutUs-header p {
 				padding: 15px 0;
 
 			}
@@ -1370,23 +1370,23 @@ padding-bottom: 2em;
 		.wmuSliderPagination {
 			right: 44%;
 		}
-		.services-section {
+		.AboutUs-section {
 			padding: 1.5em 0;
 		}
-		.services-header h3 {
+		.AboutUs-header h3 {
 			font-size: 1.5em;
 		}
-		.services-header p {
+		.AboutUs-header p {
 			font-size: 0.9em;
 		}
-		.services-grid img {
+		.AboutUs-grid img {
 			width: 20%;
 		}
-		.services-grid {
+		.AboutUs-grid {
 			padding: 16px 0;
 			width: 100%;
 		}
-		.services-grid p {
+		.AboutUs-grid p {
 			font-size: 0.9em;
 			width: 55%;
 			margin: 0 auto;
@@ -1526,19 +1526,19 @@ padding-bottom: 2em;
 			width: 12px;
 			height: 12px;
 		}
-		.services-header h3 {
+		.AboutUs-header h3 {
 			font-size: 1.4em;
 		}
-		.services-header p {
+		.AboutUs-header p {
 			
 			height: 66px;
 			overflow: hidden;
 		}
-		.services-grid h4 {
+		.AboutUs-grid h4 {
 			font-size: 1em;
 			padding: 10px 0;
 		}
-		.services-grid p {
+		.AboutUs-grid p {
 			width: 70%;
 		}
 		.exhibits-header h3 {
@@ -1672,19 +1672,19 @@ padding-bottom: 2em;
 			background-position: -299px -2px;
 			right: 0.5em;
 		}
-		.services-section {
+		.AboutUs-section {
 			padding: 1em 0;
 		}
-		.services-header p {
+		.AboutUs-header p {
 			padding: 10px 0;
 		}
-		.services-grid img {
+		.AboutUs-grid img {
 			width: 25%;
 		}
-		.services-grid {
+		.AboutUs-grid {
 			padding: 10px 0;
 		}
-		.services-grid p {
+		.AboutUs-grid p {
             width: 96%;
 			margin: 0 auto;
 			padding: 0 0px;
