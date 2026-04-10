@@ -1,427 +1,1058 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Swadesh Homes Foundation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Onepage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	    
-	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-			});
-		});
-	</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swadesh Homes Foundation | Building Dreams in Varanasi</title>
+  <meta name="description" content="Swadesh Homes Foundation Inc is a 501(c)(3) non-profit based in New Jersey helping impoverished families in Varanasi, India build proper homes." />
+  <meta name="keywords" content="Swadesh Homes, non-profit, Varanasi, India, home building, 501c3, charity, housing" />
+  <meta property="og:title" content="Swadesh Homes Foundation" />
+  <meta property="og:description" content="Building dreams for families in Varanasi, India. 29 homes completed across 6 phases." />
+  <meta property="og:url" content="https://swadeshhomes.org" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            saffron:  { DEFAULT: '#E07B27', light: '#F5A623', dark: '#B85E0F' },
+            earth:    { DEFAULT: '#8B5E3C', light: '#A67C52', dark: '#6B4226' },
+            cream:    { DEFAULT: '#FDF6EC', dark: '#F5E6D0' },
+            terracotta: { DEFAULT: '#C1440E', light: '#D9612A' },
+            sage:     { DEFAULT: '#5A7A5A', light: '#7A9E7A' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Decorative border pattern inspired by Indian motifs */
+    .indian-border {
+      border-image: repeating-linear-gradient(90deg, #E07B27 0px, #E07B27 8px, transparent 8px, transparent 16px) 1;
+    }
+
+    /* Gradient hero */
+    .hero-gradient {
+      background: linear-gradient(135deg, #8B5E3C 0%, #E07B27 50%, #C1440E 100%);
+    }
+
+    /* Phase card hover */
+    .phase-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .phase-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(139,94,60,0.2); }
+
+    /* Timeline line */
+    .timeline-line { background: linear-gradient(to bottom, #E07B27, #C1440E); }
+
+    /* Expandable content */
+    .expand-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .expand-content.open { max-height: 2000px; }
+
+    /* Nav link hover */
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #E07B27; transition: width 0.3s ease; }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Stat counter animation */
+    .stat-card { background: linear-gradient(135deg, rgba(224,123,39,0.1), rgba(193,68,14,0.1)); }
+
+    /* Slide gallery */
+    .slide { display: none; }
+    .slide.active { display: block; }
+
+    /* Mobile menu */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+
+    /* Section divider */
+    .section-divider {
+      width: 60px; height: 4px;
+      background: linear-gradient(90deg, #E07B27, #C1440E);
+      border-radius: 2px;
+      margin: 0.75rem auto 1.5rem;
+    }
+
+    /* Photo placeholder */
+    .photo-placeholder {
+      background: linear-gradient(135deg, #F5E6D0, #E8C99A);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; color: #8B5E3C; text-align: center;
+    }
+  </style>
 </head>
-<body>
-	<div class="header" id="head">
-    	<div class="container">
-        	<div class="header-top">
-				<!--script-nav-->
-				<script>
-				$("span.menu").click(function(){
-				$(".top-menu ul").slideToggle("slow" , function(){
-				});
-				});
-		 		</script>
-				<div class="clearfix"></div>
-				<div class="logo">
-					<a href="index.html"><img src="images/SwadeshHomesLogo.jpg" alt="" width="100px" height="100px" /></a>
-			 	</div>
-		   		<div class="top-menu">
-		   			<span class="menu"> </span>
-					<ul>
-							<li><a class="active" href="index.html"><span data-hover="Home">home</span></a></li>
-							<li><a href="#mission" class="scroll"><span data-hover="mission">mission</span></a></li>
-							<li><a href="#AboutUs" class="scroll"><span data-hover="AboutUs">About Us</span></a></li>
-							<li><a href="#exhibit" class="scroll"><span data-hover="exhibits">exhibits</span></a></li>
-							<li><a href="#projects" class="scroll"><span data-hover="projects">projects</span></a></li>
-							<li><a href="#contact" class="scroll"><span data-hover="contact">contact</span></a></li>
-					</ul>
-			 	</div>
-				<!--
-				<div class="donate-button">
-					<ul>
-						<li>
-							<form action="https://www.paypal.com/donate" method="post" target="_top">
-								<input type="hidden" name="hosted_button_id" value="ZPLSUFV9DRB3C" />
-								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" title="Donate to Swadesh Homes using PayPal!" alt="Donate to Swadesh Homes using PayPal!" />
-								<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-							</form>
-						</li>
-					</ul>
-				</div>
-				-->
-			</div>
-		</div>
-	</div>
 
-	<div class="content">
-		<div class="mission-section" id="mission">
-			<div class="container">
-				<div class="mission-header">
-					<table>
-						<tr>
-							<td width="70%">
-								<h3>Mission Statement</h3>
-								<center>
-									<div class="mission-text">
-										<p><b>Home ownership is the cornerstone of a strong community...</b></p>
-										<br>
-										<p>If you have a place you can call “Home”, you will have the will and courage to venture out and face any challenges life throws at you. As you face the challenges, you will have peace of mind that at the end of the day, you will be relaxing at the comfort of your home…</p>
-										<br>
-										<p>There are many in society who have not been as fortunate. Even though they have a piece of land, they don’t have the resources or time to build a home on their property</p>
-										<br>
-										<p><b>Swadesh Homes Foundation is committed to helping the impoverished in India realize their dream of home ownership.</b></p>
-										<br>
-										<p>Our goal is to identify and target specifically those individuals and families who have a piece of land but have not been able to build a home on their property. Swadesh Homes will help them by building a house which provides the basic comforts that all human being deserve</p>
-									</div>
-								</center>
-							</td>
-							<td width="30%">
-								<div class="videoContent">
-									<!-- Use a button to pause/play the video with JavaScript -->
-									<button id="myBtn" onclick="videoFunction()">Play Video</button>
-								</div>
-								<video loop id="SwadeshHomesAdVideo">
-									<source src="images/SwadeshHomesAd_v2.mp4" type="video/mp4">
-								</video>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="arrow1">
-	    		<a href="#AboutUs" class="scroll"><img src="images/arrow1.png" alt=""/></a>
-			</div>
-		</div>
-	<!-- mission-section-ends -->
+<body class="bg-cream font-sans text-gray-800 antialiased">
 
-	<div class="AboutUs-section" id="AboutUs">
-		<div class="container">
-			<div class="AboutUs-header">
-				<h3>About Us</h3>
-				<p>Swadesh Homes Foundation Inc is a New Jersey, USA based public charity that is exempt from Federal Income Tax under IRS section 501(c)(3)</p>
-				<p>Swadesh Homes Foundation Inc was formed by founding members with roots in Varanasi, Uttar Pradesh, India. The goal of this organization is to assist the economically weaker section of the population by providing them with required assistance that will fulfil their dream of owning a properly designed home that provides basic features such as a bedroom, a kitchen, a toilet, a bathroom, running water and electricity. Swadesh Homes Foundation Inc has been partly inspired by the Pradhan Mantri Awas Yojana (PMAY), a scheme started by the Central Government of India to assist the economically weaker section of the population with assistance for home building. While working towards the goals defined by Swadesh Homes Foundation Inc, the organization will indirectly further the goal of PMAY as well.</p>>
-				<P>To qualify as a beneficiary of the assistance program provided by Swadesh Homes Foundation Inc, candidates should fulfil the criteria outlined below:</P>
-				<p>
-					•	The applicant should be a member of a family/household, seeking assistance with home building for that family<br>
-					•	The land on which the home will be built should be owned (or legally inherited) by the applicant or one or more members of the same family that will be residing in that home<br>
-					•	The combined annual household income of all members of the household should be less than Rs. 2 lakhs, before the family/household is selected as a qualified beneficiary<br>
-					•	 All adult members of the household must possess Aadhaar cards<br>
-					•	The property (home to be built) must be co-owned by a female member of the family<br>
-					•	The location of the property should fall under Varanasi district in Uttar Pradesh, which is where Swadesh Homes Foundation Inc is seeking to start with the goal of providing housing assistance<br>
-				</p>
-				<h3>Services</h3>
-				<p>Our services include but not be limited to, planning, financing and construction of homes.</p>
-			</div>
-			<div class="AboutUs-sectiongrids">
-				<div class="col-md-3 AboutUs-grid">
-					<img src="images/Survey_icon.png" alt="" width="100px" height="100px"/>
-					<h4>Survey and planning</h4>
-					<p>We will conduct a survey of the land to make sure it is in conformance with any zoning restrictions and in accordance with the local laws...</p>
-				</div>
-				<div class="col-md-3 AboutUs-grid">
-					<img src="images/Design_icon.jpg" alt="" width="100px" height="100px"/>
-					<h4>Design</h4>
-					<p>A proper design to maximize the utility of the available land is essential. We will use our own architects to do a custom design of the house to maximize utility, durability and safety, and minimize the cost of construction</p>
-				</div>
-				<div class="col-md-3 AboutUs-grid">
-					<img src="images/Construction_icon.png" alt="" width="100px" height="100px"/>
-					<h4>Construction</h4>
-					<p>We will use quality material to ensure durability and minimal wear and tear, thus reducing the need for maintenance. Safety, utility and comfort will be our goal</p>
-				</div>
-				<div class="col-md-3 AboutUs-grid">
-					<img src="images/Financing_icon.png" alt="" width="100px" height="100px"/>
-					<h4>Financing</h4>
-					<p>As part of assistance, we will use our collected funds to pay for the construction...</p>
-				</div>
-				<div class="clearfix"></div>
-				<div class="arrow1">
-					<a href="#exhibit" class="scroll"><img src="images/arrow1.png" alt=""/></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- AboutUs-section-ends -->
+<!-- ===== NAVBAR ===== -->
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-saffron/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="images/SwadeshHomesLogo.jpg" alt="Swadesh Homes Foundation" class="w-12 h-12 rounded-full object-cover border-2 border-saffron" />
+        <div>
+          <div class="font-bold text-earth text-sm leading-tight">Swadesh Homes</div>
+          <div class="text-xs text-saffron">Foundation Inc</div>
+        </div>
+      </div>
 
-	<div class="exhibits-section" id="exhibit">
-		<div class="exhibits-header">
-			<h3>Exhibits</h3>
-	    </div>
-		<h2 style="text-align:center">Photo Gallery - Phase 1 Homes</h2>
-		<div class="container">
-			<div class="mySlides">
-				<div class="numbertext">1 / 12</div>
-				<img src="images/After1.jpg" style="height:400px">
-			</div>
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#home"     class="nav-link text-sm font-medium text-gray-700 hover:text-saffron transition-colors">Home</a>
+        <a href="#mission"  class="nav-link text-sm font-medium text-gray-700 hover:text-saffron transition-colors">Mission</a>
+        <a href="#about"    class="nav-link text-sm font-medium text-gray-700 hover:text-saffron transition-colors">About Us</a>
+        <a href="#services" class="nav-link text-sm font-medium text-gray-700 hover:text-saffron transition-colors">Services</a>
+        <a href="#impact"   class="nav-link text-sm font-medium text-gray-700 hover:text-saffron transition-colors">Our Impact</a>
+        <a href="#gallery"  class="nav-link text-sm font-medium text-gray-700 hover:text-saffron transition-colors">Gallery</a>
+        <a href="#contact"  class="nav-link text-sm font-medium text-gray-700 hover:text-saffron transition-colors">Contact</a>
+        <a href="#contact" class="bg-saffron hover:bg-saffron-dark text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors shadow-sm">Donate ❤️</a>
+      </div>
 
-			<div class="mySlides">
-				<div class="numbertext">2 / 12</div>
-				<img src="images/After2.jpg" style="height:400px">
-			</div>
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" onclick="toggleMenu()" class="md:hidden p-2 rounded-md text-gray-700 hover:text-saffron">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
 
-			<div class="mySlides">
-				<div class="numbertext">3 / 12</div>
-				<img src="images/After3.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">4 / 12</div>
-				<img src="images/After4.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">5 / 12</div>
-				<img src="images/After5.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">6 / 12</div>
-				<img src="images/After6.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">7 / 12</div>
-				<img src="images/After7.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">8 / 12</div>
-				<img src="images/After8.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">9 / 12</div>
-				<img src="images/After9.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">10 / 12</div>
-				<img src="images/After10.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">11 / 12</div>
-				<img src="images/After11.jpg" style="height:400px">
-			</div>
-			<div class="mySlides">
-				<div class="numbertext">12 / 12</div>
-				<img src="images/After12.jpg" style="height:400px">
-			</div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+    <a href="#home"     onclick="toggleMenu()" class="block text-sm font-medium text-gray-700 hover:text-saffron py-1">Home</a>
+    <a href="#mission"  onclick="toggleMenu()" class="block text-sm font-medium text-gray-700 hover:text-saffron py-1">Mission</a>
+    <a href="#about"    onclick="toggleMenu()" class="block text-sm font-medium text-gray-700 hover:text-saffron py-1">About Us</a>
+    <a href="#services" onclick="toggleMenu()" class="block text-sm font-medium text-gray-700 hover:text-saffron py-1">Services</a>
+    <a href="#impact"   onclick="toggleMenu()" class="block text-sm font-medium text-gray-700 hover:text-saffron py-1">Our Impact</a>
+    <a href="#gallery"  onclick="toggleMenu()" class="block text-sm font-medium text-gray-700 hover:text-saffron py-1">Gallery</a>
+    <a href="#contact"  onclick="toggleMenu()" class="block text-sm font-medium text-gray-700 hover:text-saffron py-1">Contact</a>
+    <a href="#contact"  onclick="toggleMenu()" class="inline-block bg-saffron text-white text-sm font-semibold px-4 py-2 rounded-full">Donate ❤️</a>
+  </div>
+</nav>
 
-			<a class="prev" onclick="plusSlides(-1)">❮</a>
-			<a class="next" onclick="plusSlides(1)">❯</a>
+<!-- ===== HERO ===== -->
+<section id="home" class="hero-gradient min-h-screen flex items-center pt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="text-white">
+        <!-- Decorative element -->
+        <div class="flex items-center space-x-2 mb-4">
+          <div class="w-8 h-0.5 bg-white/60"></div>
+          <span class="text-sm font-medium text-white/80 uppercase tracking-wider">501(c)(3) Non-Profit · New Jersey, USA</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          Building <span class="text-yellow-300">Dreams</span><br/>
+          One Home<br/>
+          at a Time
+        </h1>
+        <p class="text-lg text-white/90 mb-8 max-w-lg leading-relaxed">
+          Swadesh Homes Foundation helps impoverished families in Varanasi, India realize their dream of home ownership — providing dignity, security, and hope for generations to come.
+        </p>
 
-			<div class="caption-container">
-				<p id="caption"></p>
-			</div>
+        <!-- Stats bar -->
+        <div class="flex flex-wrap gap-6 mb-8">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-yellow-300">29</div>
+            <div class="text-xs text-white/70 uppercase tracking-wide">Homes Built</div>
+          </div>
+          <div class="w-px bg-white/30"></div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-yellow-300">29</div>
+            <div class="text-xs text-white/70 uppercase tracking-wide">Families Helped</div>
+          </div>
+          <div class="w-px bg-white/30"></div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-yellow-300">6</div>
+            <div class="text-xs text-white/70 uppercase tracking-wide">Phases Complete</div>
+          </div>
+          <div class="w-px bg-white/30"></div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-yellow-300">3+</div>
+            <div class="text-xs text-white/70 uppercase tracking-wide">Years of Impact</div>
+          </div>
+        </div>
 
-			<div class="row">
-				<div class="column">
-					<img class="demo cursor" src="images/After1.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/After2.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/After3.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/After4.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/After5.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/After6.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/After7.jpg" style="width:100%" onclick="currentSlide(7)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/After8.jpg" style="width:100%" onclick="currentSlide(8)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/After9.jpg" style="width:100%" onclick="currentSlide(9)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/After10.jpg" style="width:100%" onclick="currentSlide(10)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/After11.jpg" style="width:100%" onclick="currentSlide(11)" alt="">
-				</div>
-				<div class="column">
-					<img class="demo cursor" src="images/After12.jpg" style="width:100%" onclick="currentSlide(12)" alt="">
-				</div>
-			</div>
+        <div class="flex flex-wrap gap-4">
+          <a href="#impact" class="bg-white text-saffron-dark font-semibold px-6 py-3 rounded-full hover:bg-yellow-50 transition-colors shadow-lg">
+            See Our Impact →
+          </a>
+          <a href="#contact" class="border-2 border-white text-white font-semibold px-6 py-3 rounded-full hover:bg-white/10 transition-colors">
+            Donate Now ❤️
+          </a>
+        </div>
+      </div>
 
+      <!-- Hero image / video column -->
+      <div class="flex flex-col items-center gap-6">
+        <div class="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl">
+          <img src="images/VaranasiGhat.jpg" alt="Completed home for a family in Varanasi" class="w-full h-72 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder w-full h-72" style="display:none">
+            <div class="p-6 text-center">
+              <div class="text-4xl mb-2">🏠</div>
+              <div class="font-semibold text-earth">Phase 1 Completed Home</div>
+              <div class="text-xs mt-1">Varanasi, India</div>
+            </div>
+          </div>
+          <!-- Badge -->
+          <div class="absolute bottom-4 left-4 bg-white/95 rounded-lg px-3 py-2 shadow-lg">
+            <div class="text-xs text-gray-500">Our target location</div>
+            <div class="font-bold text-earth text-sm">Varanasi, India</div>
+          </div>
+        </div>
+        <!-- Video button -->
+        <!--
+        <div class="w-full max-w-md">
+          <video controls class="w-full rounded-xl shadow-lg" poster="images/phase1/after/After1.jpg">
+            <source src="images/SwadeshHomesAd_v2.mp4" type="video/mp4">
+          </video>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+</section>
 
-			<script>
-				var slideIndex = 1;
-				showSlides(slideIndex);
+<!-- ===== MISSION ===== -->
+<section id="mission" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-4">
+      <span class="text-saffron text-sm font-semibold uppercase tracking-widest">Our Purpose</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-earth mt-2">Mission Statement</h2>
+      <div class="section-divider"></div>
+    </div>
 
-			</script>
+    <div class="grid lg:grid-cols-3 gap-8 items-start">
+      <!-- Mission text -->
+      <div class="lg:col-span-2 space-y-4 text-gray-600 leading-relaxed text-base">
+        <p class="text-lg font-semibold text-earth italic border-l-4 border-saffron pl-4">
+          "Home ownership is the cornerstone of a strong community."
+        </p>
+        <p>
+          If you have a place you can call "Home", you will have the will and courage to venture out and face any challenges life throws at you. As you face the challenges, you will have the peace of mind that at the end of the day, you will be relaxing in the comfort of your own home.
+        </p>
+        <p>
+          There are many in society who have not been as fortunate. Even though they have a piece of land, they don't have the resources or time to build a home on their property.
+        </p>
+        <p class="font-semibold text-earth">
+          Swadesh Homes Foundation is committed to helping the impoverished in India realize their dream of home ownership.
+        </p>
+        <p>
+          Our goal is to identify and target specifically those individuals and families who have a piece of land but have not been able to build a home on their property. Swadesh Homes will help them by building a house which provides the basic comforts that all human beings deserve.
+        </p>
+      </div>
 
-			<div class="arrow">
-				<a href="#projects" class="scroll"><img src="images/arrow.png" alt=""/></a>
-			</div>
+      <!-- Mission values -->
+      <div class="bg-cream-dark rounded-2xl p-6 space-y-4">
+        <h3 class="font-bold text-earth text-lg mb-4">Our Core Values</h3>
+        <div class="flex items-start space-x-3">
+          <span class="text-2xl">🏠</span>
+          <div>
+            <div class="font-semibold text-earth text-sm">Dignity</div>
+            <div class="text-xs text-gray-500">Every family deserves a safe, sturdy home</div>
+          </div>
+        </div>
+        <div class="flex items-start space-x-3">
+          <span class="text-2xl">🤝</span>
+          <div>
+            <div class="font-semibold text-earth text-sm">Community</div>
+            <div class="text-xs text-gray-500">Stronger homes build stronger communities</div>
+          </div>
+        </div>
+        <div class="flex items-start space-x-3">
+          <span class="text-2xl">💫</span>
+          <div>
+            <div class="font-semibold text-earth text-sm">Hope</div>
+            <div class="text-xs text-gray-500">A home is the foundation of every dream</div>
+          </div>
+        </div>
+        <div class="flex items-start space-x-3">
+          <span class="text-2xl">✅</span>
+          <div>
+            <div class="font-semibold text-earth text-sm">Transparency</div>
+            <div class="text-xs text-gray-500">100% of funds go toward building homes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-		</div>
-	</div>
-	<!-- portfolio-section-ends -->
+<!-- ===== ABOUT US ===== -->
+<section id="about" class="py-20 bg-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-4">
+      <span class="text-saffron text-sm font-semibold uppercase tracking-widest">Who We Are</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-earth mt-2">About Us</h2>
+      <div class="section-divider"></div>
+    </div>
 
-	<div class="projects-section" id="projects">
-		<div class="container">
-			<div class="projects-header">
-				<h3>projects</h3>
-				<p>Participation in this program will be voluntary and within the constraints of local laws.
-					We will strive to help 5 to 10 families with construction of their homes each year.
-				</p>
-				<br>
-				<p>Phase 1 of this initiative started in October 2021, with the following list of families for whom Swadesh Homes built houses. Phase 1 was successfully completed by April-end 2022. On May 4, 2022 the houses were handed over to the 6 families. This event was followed by celebrations organized by the recipients.
-				</p>
-				<h2>Phase 1 Beneficiaries</h2>
-				<br>
+    <!-- 501c3 Banner -->
+    <div class="bg-gradient-to-r from-earth to-saffron rounded-2xl p-6 mb-10 text-white flex flex-wrap items-center gap-4">
+      <div class="flex items-center space-x-3">
+        <span class="text-4xl">🏛️</span>
+        <div>
+          <div class="font-bold text-lg">IRS-Recognized 501(c)(3) Non-Profit</div>
+          <div class="text-white/80 text-sm">Your donation is fully tax-deductible under US federal law</div>
+        </div>
+      </div>
+      <div class="ml-auto">
+        <a href="#contact" class="bg-white text-earth font-semibold px-5 py-2 rounded-full text-sm hover:bg-yellow-50 transition-colors">Donate &amp; Deduct →</a>
+      </div>
+    </div>
 
-				<table id="phase1customers">
-					<tr>
-						<th >Family</th>
-						<th>Description of property and home to be built</th>
-						<th>Location</th>
-					</tr>
-					<tr>
-						<td><b>Saroj and Shyamsundar</b></td>
-						<td>Home already build. Required renovation and extension</td>
-						<td>Mavaiya, Sarnath, Varanasi</td>
-					</tr>
-					<tr>
-						<td><b>Rekha Devi & Lakshman Rajbhar</b></td>
-						<td>1 of 5 new flats built on a 1400 Sq ft property</td>
-						<td>Mavaiya, Sarnath, Varanasi</td>
-					</tr>
-					<tr>
-						<td><b>Jeevan Lal & Rinku Devi</b> (Rekha's family)</td>
-						<td>1 of 5 new flats built on a 1400 Sq ft propertyn</td>
-						<td>Mavaiya, Sarnath, Varanasi</td>
-					</tr>
-					<tr>
-						<td><b>Bharat Rajbhar & Sunita Devi</b> (Rekha's family)</td>
-						<td>1 of 5 new flats built on a 1400 Sq ft property</td>
-						<td>Mavaiya, Sarnath, Varanasi</td>
-					</tr>
-					<tr>
-						<td><b>Arjun & Soni Dev</b> (Rekha's family)</td>
-						<td>1 of 5 new flats built on a 1400 Sq ft property</td>
-						<td>Mavaiya, Sarnath, Varanasi</td>
-					</tr>
-					<tr>
-						<td><b>Ramji Rajbhar</b> (Rekha's family)</td>
-						<td>1 of 5 new flats built on a 1400 Sq ft property</td>
-						<td>Mavaiya, Sarnath, Varanasi</td>
-					</tr>
-				</table>
-				<br>
-				<p>Planning and construction of phase 2 of this initiative started in October 2022. Phase 2 was successfully completed in Feb 2023 and the houses were handed over to the recipients at a handover ceremony. Following is the list of beneficiaries.
-				</p>
-				<h2>Phase 2 Candidates</h2>
-				<br>
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div class="space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          <strong class="text-earth">Swadesh Homes Foundation Inc</strong> is a New Jersey, USA-based public charity, exempt from Federal Income Tax under IRS Section 501(c)(3). We were formed by founding members with roots in Varanasi, Uttar Pradesh, India.
+        </p>
+        <p>
+          Our goal is to assist the economically weaker section of the population by providing assistance that fulfills their dream of owning a properly designed home — featuring a bedroom, kitchen, toilet, bathroom, running water, and electricity.
+        </p>
+        <p>
+          We have been partly inspired by the <strong class="text-earth">Pradhan Mantri Awas Yojana (PMAY)</strong>, the Central Government of India's scheme to assist the economically weaker sections with home building. Our work directly furthers the goals of PMAY.
+        </p>
 
-				<table id="phase2customers">
-					<tr>
-						<th >Family</th>
-						<th>Description of property and home to be built</th>
-						<th>Location</th>
-					</tr>
-					<tr>
-						<td><b>Basant Lal</b> (Shyamsundar's brother)</td>
-						<td>New home to be built on a 1200 Sq ft property. Property is shared by Ajay, Basant and Munnar</td>
-						<td>Mavaiya, Sarnath, Varanasi</td>
-					</tr>
-					<tr>
-						<td><b>Munnar Rajbhar & Sunita Devi</b> (Shayamsundar's brother)</td>
-						<td>New home to be built on a 1200 Sq ft property. Property is shared by Ajay, Basant and Munnar</td>
-						<td>Mavaiya, Sarnath, Varanasi</td>
-					</tr>
-					<tr>
-						<td><b>Ajay Rajbhar & Nitu</b> (Shayamsundar's brother)</td>
-						<td>New home to be built on a 1200 Sq ft property. Property is shared by Ajay, Basant and Munnar</td>
-						<td>Mavaiya, Sarnath, Varanasi</td>
-					</tr>
-				</table>
-				<div class="arrow">
-					<a href="#contact" class="scroll"><img src="images/arrow.png" alt=""/></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- project-section-ends -->
+        <!-- Eligibility criteria -->
+        <div class="bg-white rounded-xl p-5 border border-saffron/20 mt-4">
+          <h4 class="font-bold text-earth mb-3">Beneficiary Eligibility Criteria</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start space-x-2"><span class="text-saffron mt-0.5">✓</span><span>Family must own or legally inherit the land on which the home will be built</span></li>
+            <li class="flex items-start space-x-2"><span class="text-saffron mt-0.5">✓</span><span>Combined annual household income less than ₹2 lakhs</span></li>
+            <li class="flex items-start space-x-2"><span class="text-saffron mt-0.5">✓</span><span>All adult household members must possess Aadhaar cards</span></li>
+            <li class="flex items-start space-x-2"><span class="text-saffron mt-0.5">✓</span><span>Property must be co-owned by a female member of the family</span></li>
+            <li class="flex items-start space-x-2"><span class="text-saffron mt-0.5">✓</span><span>Property location must fall under Varanasi district, Uttar Pradesh</span></li>
+          </ul>
+        </div>
+      </div>
 
-	<div class="footer-section" id="contact">
-		<div class="container">
-			<div class="contact-header">
-				<h3>contact</h3>
-				<h4>For making a contribution</h4>
-				<p>
-					<!--
-					Click on the "Donate" button at the top right of this page and follow directions<br><br>
-					OR<br><br>
-					-->
-					Send a check to the following address and make the check payable to "<b>Swadesh Homes Foundation Inc</b>"<br>
-					<br>
-					Swadesh Homes Foundation Inc<br>
-					18 Haverford Road<br>
-					West Windsor, NJ 08550<br>
-				</p>
-				<h4>To find out more about this organization send a message using the form below, and we will contact you as soon as possible.</h4>
-			</div>
+      <!-- Founding story -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-saffron/10">
+        <h3 class="font-bold text-earth text-xl mb-4">Our Story</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+          Founded by a group of NRIs with deep roots in Varanasi, Swadesh Homes was born from a simple but powerful idea: we can use our position abroad to give back to the communities that shaped us.
+        </p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+          Starting with just 6 families in Phase 1 (2022), we've now completed <strong>6 phases and 29 homes</strong> — each one a story of dignity restored and futures secured.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="stat-card rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-saffron">2021</div>
+            <div class="text-xs text-gray-500 mt-1">Founded</div>
+          </div>
+          <div class="stat-card rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-saffron">NJ, USA</div>
+            <div class="text-xs text-gray-500 mt-1">Headquartered</div>
+          </div>
+          <div class="stat-card rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-saffron">29</div>
+            <div class="text-xs text-gray-500 mt-1">Homes Completed</div>
+          </div>
+          <div class="stat-card rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-saffron">Varanasi</div>
+            <div class="text-xs text-gray-500 mt-1">Impact Location</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-			<div class="contact">
-				<form class="contact-info">
-					<div class="col-md-4 contactgrid">
-						<input id="name" type="text" class="text" value=" name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' name';}">
-					</div>
-					<div class="col-md-4 contactgrid">
-						<input id="email" type="text" class="text" value="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'email';}">
-					</div>
-					<div class="col-md-4 contactgrid">
-						<input id="phone" type="text" class="text" value="phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'phone';}">
-					</div>
-					<div class="col-md-8 contactgrid1">
-						<textarea id="message" onfocus="if(this.value == 'Your Message') this.value='';" onblur="if(this.value == '') this.value='Your Message';" >Your Message</textarea>
-					</div>
-				</form>
-			</div>
-			<div class="col-md-4 contactgrid2">
-				<input onclick="getInfo()" type="submit" value="Send message">
-			</div>
-			<div class="clearfix"></div>
-			<div class="footer-bottom">
-				<p>&copy; Swadesh Homes Foundation Inc.</p>
-			</div>
-			<script type="text/javascript">
-				$(document).ready(function() {
-					/*
-					var defaults = {
-			  			containerID: 'toTop', // fading element id
-						containerHoverID: 'toTopHover', // fading element hover id
-						scrollSpeed: 1200,
-						easingType: 'linear'
-			 		};
-					*/
-							
-					$().UItoTop({ easingType: 'easeOutQuart' });
-							
-				});
-			</script>
-			<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-		</div>
+<!-- ===== SERVICES ===== -->
+<section id="services" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-4">
+      <span class="text-saffron text-sm font-semibold uppercase tracking-widest">What We Do</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-earth mt-2">Our Services</h2>
+      <div class="section-divider"></div>
+      <p class="text-gray-500 max-w-xl mx-auto text-sm">Our services include but are not limited to planning, financing, and construction of homes — end-to-end.</p>
+    </div>
 
-	</div>
-	</div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+      <!-- Survey -->
+      <div class="phase-card bg-cream rounded-2xl p-6 text-center border border-saffron/10">
+        <div class="w-16 h-16 mx-auto mb-4 bg-saffron/10 rounded-full flex items-center justify-center">
+          <img src="images/Survey_icon.png" alt="Survey" class="w-10 h-10 object-contain" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-3xl\'>📐</span>'"/>
+        </div>
+        <h4 class="font-bold text-earth mb-2">Survey & Planning</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">We conduct a thorough land survey ensuring conformance with zoning restrictions and local laws before construction begins.</p>
+      </div>
+      <!-- Design -->
+      <div class="phase-card bg-cream rounded-2xl p-6 text-center border border-saffron/10">
+        <div class="w-16 h-16 mx-auto mb-4 bg-saffron/10 rounded-full flex items-center justify-center">
+          <img src="images/Design_icon.jpg" alt="Design" class="w-10 h-10 object-contain" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-3xl\'>🏗️</span>'"/>
+        </div>
+        <h4 class="font-bold text-earth mb-2">Design</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">Custom architectural designs to maximize utility, durability, and safety of every square foot — while keeping costs minimal.</p>
+      </div>
+      <!-- Construction -->
+      <div class="phase-card bg-cream rounded-2xl p-6 text-center border border-saffron/10">
+        <div class="w-16 h-16 mx-auto mb-4 bg-saffron/10 rounded-full flex items-center justify-center">
+          <img src="images/Construction_icon.png" alt="Construction" class="w-10 h-10 object-contain" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-3xl\'>🧱</span>'"/>
+        </div>
+        <h4 class="font-bold text-earth mb-2">Construction</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">Quality materials ensuring durability and minimal maintenance. Safety, utility, and comfort are the guiding principles.</p>
+      </div>
+      <!-- Financing -->
+      <div class="phase-card bg-cream rounded-2xl p-6 text-center border border-saffron/10">
+        <div class="w-16 h-16 mx-auto mb-4 bg-saffron/10 rounded-full flex items-center justify-center">
+          <img src="images/Financing_icon.png" alt="Financing" class="w-10 h-10 object-contain" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-3xl\'>💰</span>'"/>
+        </div>
+        <h4 class="font-bold text-earth mb-2">Financing</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">We use donor funds to fully finance construction costs, ensuring families receive their homes without any financial burden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR IMPACT ===== -->
+<section id="impact" class="py-20 bg-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-4">
+      <span class="text-saffron text-sm font-semibold uppercase tracking-widest">Completed Projects</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-earth mt-2">Our Impact</h2>
+      <div class="section-divider"></div>
+      <p class="text-gray-500 max-w-2xl mx-auto">
+        Since 2022, we have completed <strong class="text-earth">6 phases</strong>, building <strong class="text-earth">29 homes</strong> for <strong class="text-earth">29 families</strong> in Varanasi — each home a story of dignity, hope, and new beginnings.
+      </p>
+    </div>
+
+    <!-- Impact summary bar -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-14">
+      <div class="bg-gradient-to-br from-saffron to-saffron-dark text-white rounded-2xl p-5 text-center">
+        <div class="text-4xl font-bold">29</div>
+        <div class="text-sm text-white/80 mt-1">Homes Built</div>
+      </div>
+      <div class="bg-gradient-to-br from-earth to-earth-dark text-white rounded-2xl p-5 text-center">
+        <div class="text-4xl font-bold">29</div>
+        <div class="text-sm text-white/80 mt-1">Families Housed</div>
+      </div>
+      <div class="bg-gradient-to-br from-terracotta to-terracotta-light text-white rounded-2xl p-5 text-center">
+        <div class="text-4xl font-bold">6</div>
+        <div class="text-sm text-white/80 mt-1">Phases Complete</div>
+      </div>
+      <div class="bg-gradient-to-br from-sage to-sage-light text-white rounded-2xl p-5 text-center">
+        <div class="text-4xl font-bold">3+</div>
+        <div class="text-sm text-white/80 mt-1">Years of Impact</div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <!-- Vertical timeline line (desktop) -->
+      <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full timeline-line rounded-full opacity-30"></div>
+
+      <div class="space-y-12">
+
+        <!-- PHASE 1 -->
+        <div class="phase-card" id="phase1-card">
+          <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-saffron/20 order-2 lg:order-1">
+              <!-- Phase header -->
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3">
+                  <div class="w-10 h-10 bg-saffron rounded-full flex items-center justify-center text-white font-bold text-sm shadow">1</div>
+                  <div>
+                    <div class="font-bold text-earth text-lg">Phase 1</div>
+                    <div class="text-xs text-saffron font-medium">✅ Completed April 2022</div>
+                  </div>
+                </div>
+                <div class="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">6 Homes · 6 Families</div>
+              </div>
+
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Our founding phase — where the dream became reality. Starting in October 2021, Phase 1 was successfully completed by April 2022. On May 4, 2022, the keys were handed over to 6 families in a joyful ceremony in Mavaiya, Sarnath, Varanasi.
+              </p>
+
+              <!-- Expandable family list -->
+              <button onclick="toggleExpand('phase1-families')" class="text-saffron text-sm font-semibold hover:underline flex items-center space-x-1 mb-2">
+                <span id="phase1-btn-text">▼ View Phase 1 Families</span>
+              </button>
+              <div id="phase1-families" class="expand-content">
+                <div class="overflow-x-auto mt-3">
+                  <table class="w-full text-sm">
+                    <thead><tr class="bg-saffron/10">
+                      <th class="text-left p-2 text-earth font-semibold rounded-tl">Family</th>
+                      <th class="text-left p-2 text-earth font-semibold">Description</th>
+                      <th class="text-left p-2 text-earth font-semibold rounded-tr">Location</th>
+                    </tr></thead>
+                    <tbody class="divide-y divide-gray-100">
+                      <tr><td class="p-2 font-medium">Saroj &amp; Shyamsundar</td><td class="p-2 text-gray-500">Renovation &amp; extension of existing home</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                      <tr><td class="p-2 font-medium">Rekha Devi &amp; Lakshman Rajbhar</td><td class="p-2 text-gray-500">1 of 5 new flats on 1400 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                      <tr><td class="p-2 font-medium">Jeevan Lal &amp; Rinku Devi</td><td class="p-2 text-gray-500">1 of 5 new flats on 1400 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                      <tr><td class="p-2 font-medium">Bharat Rajbhar &amp; Sunita Devi</td><td class="p-2 text-gray-500">1 of 5 new flats on 1400 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                      <tr><td class="p-2 font-medium">Arjun &amp; Soni Dev</td><td class="p-2 text-gray-500">1 of 5 new flats on 1400 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                      <tr><td class="p-2 font-medium">Ramji Rajbhar</td><td class="p-2 text-gray-500">1 of 5 new flats on 1400 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 1 photos -->
+            <div class="mt-6 lg:mt-0 order-1 lg:order-2 grid grid-cols-2 gap-3">
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase1/after/After1.jpg" alt="Phase 1 Home 1" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 1</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase1/after/After2.jpg" alt="Phase 1 Home 2" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 2</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase1/after/After3.jpg" alt="Phase 1 Home 3" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 3</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase1/after/After4.jpg" alt="Phase 1 Home 4" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 4</div>'"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 2 -->
+        <div class="phase-card" id="phase2-card">
+          <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+
+            <!-- Phase 2 Photos -->
+            <div class="grid grid-cols-2 gap-3 mb-6 lg:mb-0">
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase2/after/Phase2Pic1.jpg" alt="Phase 4 Pic" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 Phase 2 Photo</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase2/after/Phase2Pic2.jpg" alt="Phase 4 Pic" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 Phase 2 Photo</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase2/after/Phase2Pic3.jpg" alt="Phase 4 Families Group Pic" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 Phase 2 Photo</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase2/after/Phase2Pic4.jpg" alt="Phase 4 Families Group Pic" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 Phase 2 Photo</div>'"/>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-saffron/20">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3">
+                  <div class="w-10 h-10 bg-earth rounded-full flex items-center justify-center text-white font-bold text-sm shadow">2</div>
+                  <div>
+                    <div class="font-bold text-earth text-lg">Phase 2</div>
+                    <div class="text-xs text-saffron font-medium">✅ Completed February 2023</div>
+                  </div>
+                </div>
+                <div class="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">3 Homes · 3 Families</div>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Building on Phase 1's success, Phase 2 focused on the extended Rajbhar family — three brothers who shared a 1200 sq ft property. Construction started October 2022, and all three families received their homes in a handover ceremony in February 2023.
+              </p>
+              <!-- Expandable family list -->
+              <button onclick="toggleExpand('phase2-families')" class="text-saffron text-sm font-semibold hover:underline flex items-center space-x-1 mb-2">
+                <span id="phase2-btn-text">▼ View Phase 2 Families</span>
+              </button>
+              <div id="phase2-families" class="expand-content">
+                <div class="overflow-x-auto mt-3">
+                  <table class="w-full text-sm">
+                    <thead><tr class="bg-saffron/10">
+                      <th class="text-left p-2 text-earth font-semibold">Family</th>
+                      <th class="text-left p-2 text-earth font-semibold">Description</th>
+                      <th class="text-left p-2 text-earth font-semibold">Location</th>
+                    </tr></thead>
+                    <tbody class="divide-y divide-gray-100">
+                      <tr><td class="p-2 font-medium">Basant Lal</td><td class="p-2 text-gray-500">New home on 1200 sq ft shared property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                      <tr><td class="p-2 font-medium">Munnar Rajbhar &amp; Sunita Devi</td><td class="p-2 text-gray-500">New home on 1200 sq ft shared property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                      <tr><td class="p-2 font-medium">Ajay Rajbhar &amp; Nitu</td><td class="p-2 text-gray-500">New home on 1200 sq ft shared property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 3 -->
+        <div class="phase-card" id="phase3-card">
+          <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-saffron/20 order-2 lg:order-1">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3">
+                  <div class="w-10 h-10 bg-terracotta rounded-full flex items-center justify-center text-white font-bold text-sm shadow">3</div>
+                  <div>
+                    <div class="font-bold text-earth text-lg">Phase 3</div>
+                    <div class="text-xs text-saffron font-medium">✅ Completed February 2024</div>
+                  </div>
+                </div>
+                <div class="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">6 Homes · 6 Families</div>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Phase 3 marked our second full 6-family cohort, demonstrating our ability to scale and sustain impact. Six more families in Varanasi received the keys to their new homes in February 2024 — each home built to the same quality standard as those before.
+              </p>
+              <!-- Expandable family list -->
+              <button onclick="toggleExpand('phase3-families')" class="text-saffron text-sm font-semibold hover:underline flex items-center space-x-1 mb-2">
+                <span id="phase3-btn-text">▼ View Phase 3 Families</span>
+              </button>
+              <div id="phase3-families" class="expand-content">
+                <div class="overflow-x-auto mt-3">
+                  <table class="w-full text-sm">
+                    <thead><tr class="bg-saffron/10">
+                      <th class="text-left p-2 text-earth font-semibold rounded-tl">Family</th>
+                      <th class="text-left p-2 text-earth font-semibold">Description</th>
+                      <th class="text-left p-2 text-earth font-semibold rounded-tr">Location</th>
+                    </tr></thead>
+                    <tbody class="divide-y divide-gray-100">
+                    <tr><td class="p-2 font-medium">Kailash & Champa Devi</td><td class="p-2 text-gray-500">1 of 6 new flats on 3000 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">Anand Ram & Rukamani Devi</td><td class="p-2 text-gray-500">1 of 6 new flats on 3000 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">Vijay Kumar & Pushpa Kumari</td><td class="p-2 text-gray-500">1 of 6 new flats on 3000 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">Vinod & Chanda Devi</td><td class="p-2 text-gray-500">1 of 6 new flats on 3000 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">Ashok Kumar Gond & Nijla Devi</td><td class="p-2 text-gray-500">1 of 6 new flats on 3000 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">Pramod Kumar & Shailu Devi</td><td class="p-2 text-gray-500">1 of 6 new flats on 3000 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- Phase 3 photos -->
+            <div class="mt-6 lg:mt-0 order-1 lg:order-2 grid grid-cols-2 gap-3">
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase3/after/Phase3Families1.jpg" alt="Phase 1 Home 1" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 1</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase3/after/Phase3Families2.jpg" alt="Phase 1 Home 2" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 2</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase3/after/Phase3Families3.jpg" alt="Phase 1 Home 3" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 3</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase3/after/Phase3Families4.jpg" alt="Phase 1 Home 4" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 4</div>'"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 4 -->
+        <div class="phase-card" id="phase4-card">
+          <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+            <!-- Photos first on desktop for alternating layout -->
+            <div class="grid grid-cols-2 gap-3 mb-6 lg:mb-0">
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase4/after/Phase4Families1.jpg" alt="Phase 4 Pic" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 Phase 2 Photo</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase4/after/Phase4Families2.jpg" alt="Phase 4 Pic" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 Phase 2 Photo</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase4/after/Phase4Pic1.jpg" alt="Phase 4 Families Group Pic" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 Phase 2 Photo</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase4/after/Phase4Pic2.jpg" alt="Phase 4 Families Group Pic" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 Phase 2 Photo</div>'"/>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-saffron/20">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3">
+                  <div class="w-10 h-10 bg-saffron-dark rounded-full flex items-center justify-center text-white font-bold text-sm shadow">4</div>
+                  <div>
+                    <div class="font-bold text-earth text-lg">Phase 4</div>
+                    <div class="text-xs text-saffron font-medium">✅ Completed January 2025</div>
+                  </div>
+                </div>
+                <div class="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">6 Homes · 6 Families</div>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Phase 4 — our first mid-year completion — brought 6 more families into their homes by August 2024. This accelerated timeline shows the growing efficiency and momentum of our operations in Varanasi.
+              </p>
+              <!-- Expandable family list -->
+              <button onclick="toggleExpand('phase4-families')" class="text-saffron text-sm font-semibold hover:underline flex items-center space-x-1 mb-2">
+                <span id="phase4-btn-text">▼ View Phase 4 Families</span>
+              </button>
+              <div id="phase4-families" class="expand-content">
+                <div class="overflow-x-auto mt-3">
+                  <table class="w-full text-sm">
+                    <thead><tr class="bg-saffron/10">
+                      <th class="text-left p-2 text-earth font-semibold rounded-tl">Family</th>
+                      <th class="text-left p-2 text-earth font-semibold">Description</th>
+                      <th class="text-left p-2 text-earth font-semibold rounded-tr">Location</th>
+                    </tr></thead>
+                    <tbody class="divide-y divide-gray-100">
+                    <tr><td class="p-2 font-medium">Sabera (Saroja's brother)</td><td class="p-2 text-gray-500">1 of 6 new flats in a 2-story building</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">Ashish (Saroja's brother)</td><td class="p-2 text-gray-500">1 of 6 new flats in a 2-story building</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">TBD</td><td class="p-2 text-gray-500">1 of 6 new flats in a 2-story building</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">TBD</td><td class="p-2 text-gray-500">1 of 6 new flats in a 2-story building</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">TBD</td><td class="p-2 text-gray-500">1 of 6 new flats in a 2-story building</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">TBD</td><td class="p-2 text-gray-500">1 of 6 new flats in a 2-story building</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 5 -->
+        <div class="phase-card" id="phase5-card">
+          <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-saffron/20 order-2 lg:order-1">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3">
+                  <div class="w-10 h-10 bg-earth-light rounded-full flex items-center justify-center text-white font-bold text-sm shadow">5</div>
+                  <div>
+                    <div class="font-bold text-earth text-lg">Phase 5</div>
+                    <div class="text-xs text-saffron font-medium">✅ Completed February 2025</div>
+                  </div>
+                </div>
+                <div class="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">5 Homes · 5 Families</div>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Phase 5 brought 5 families their dream homes in February 2025, continuing our winter delivery tradition. Each home is fully equipped with all basic amenities — a bedroom, kitchen, toilet, bathroom, running water, and electricity.
+              </p>
+              <!-- Expandable family list -->
+              <button onclick="toggleExpand('phase5-families')" class="text-saffron text-sm font-semibold hover:underline flex items-center space-x-1 mb-2">
+                <span id="phase5-btn-text">▼ View Phase 5 Families</span>
+              </button>
+              <div id="phase5-families" class="expand-content">
+                <div class="overflow-x-auto mt-3">
+                  <table class="w-full text-sm">
+                    <thead><tr class="bg-saffron/10">
+                      <th class="text-left p-2 text-earth font-semibold rounded-tl">Family</th>
+                      <th class="text-left p-2 text-earth font-semibold">Description</th>
+                      <th class="text-left p-2 text-earth font-semibold rounded-tr">Location</th>
+                    </tr></thead>
+                    <tbody class="divide-y divide-gray-100">
+                    <tr><td class="p-2 font-medium">Santosh Kumar & Suman Lata</td><td class="p-2 text-gray-500">1 of 5 new flats on 3000 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">Arvind & Subhadra</td><td class="p-2 text-gray-500">1 of 5 new flats on 3000 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">Govind Kumar & Rekha Gond</td><td class="p-2 text-gray-500">1 of 5 new flats on 3000 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">Aman</td><td class="p-2 text-gray-500">1 of 5 new flats on 3000 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    <tr><td class="p-2 font-medium">Ajit</td><td class="p-2 text-gray-500">1 of 5 new flats on 3000 sq ft property</td><td class="p-2 text-gray-500">Mavaiya, Sarnath</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 5 photos -->
+            <div class="mt-6 lg:mt-0 order-1 lg:order-2 grid grid-cols-2 gap-3">
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase5/after/Phase5Pic1.jpg" alt="Phase 1 Home 1" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 1</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase5/after/Phase5Pic2.jpg" alt="Phase 1 Home 2" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 2</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase5/after/Phase5Pic3.jpg" alt="Phase 1 Home 3" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 3</div>'"/>
+              </div>
+              <div class="photo-placeholder rounded-xl overflow-hidden h-36">
+                <img src="images/phase5/after/Phase5Pic4.jpg" alt="Phase 1 Home 4" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder h-36 rounded-xl flex items-center justify-center\'>🏠 After Photo 4</div>'"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 6 (Most Recent) -->
+        <div class="phase-card" id="phase6-card">
+          <div class="relative bg-gradient-to-br from-earth to-saffron rounded-2xl p-1 shadow-xl">
+            <div class="bg-white rounded-xl p-6">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3">
+                  <div class="w-12 h-12 bg-gradient-to-br from-saffron to-earth rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">6</div>
+                  <div>
+                    <div class="font-bold text-earth text-xl">Phase 6 — Most Recent!</div>
+                    <div class="text-sm text-saffron font-semibold">✅ Completed April 2025</div>
+                  </div>
+                </div>
+                <div class="bg-saffron text-white text-xs font-bold px-3 py-1 rounded-full">3 Homes · 3 Families · Latest!</div>
+              </div>
+
+              <div class="lg:grid lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Our most recently completed phase — Phase 6 wrapped up in April 2025, bringing 3 more families into their forever homes. As of today, Swadesh Homes Foundation has now built <strong class="text-earth">29 homes for 29 families</strong> across Varanasi.
+                  </p>
+                  <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Each home includes a bedroom, kitchen, toilet, bathroom, running water, and electricity — the basic comforts every human being deserves.
+                  </p>
+                  <a href="#contact" class="inline-block bg-saffron text-white font-semibold px-5 py-2 rounded-full text-sm hover:bg-saffron-dark transition-colors">
+                    Help fund Phase 7 →
+                  </a>
+                </div>
+                <div class="mt-6 lg:mt-0 grid grid-cols-2 gap-3">
+                  <div class="col-span-2 bg-gradient-to-r from-saffron/20 to-earth/20 rounded-xl h-32 flex items-center justify-center text-earth font-medium text-center">
+                    <div>
+                      <div class="text-3xl mb-1">🎉</div>
+                      <div class="font-bold">Phase 6 Handover</div>
+                      <div class="text-sm text-gray-500">April 2025 · Varanasi</div>
+                    </div>
+                  </div>
+                  <div class="bg-cream-dark rounded-xl h-24 flex items-center justify-center text-earth text-sm font-medium text-center px-2">
+                    📸 Phase 6<br/>Photos Coming Soon
+                  </div>
+                  <div class="bg-cream-dark rounded-xl h-24 flex items-center justify-center text-earth text-sm font-medium text-center px-2">
+                    3 Families<br/>New Homes 🏠
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 7 - Coming Soon -->
+        <div class="phase-card opacity-70">
+          <div class="bg-white rounded-2xl p-6 border-2 border-dashed border-saffron/40 text-center">
+            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 font-bold text-lg mx-auto mb-3">7</div>
+            <h4 class="font-bold text-gray-500 text-lg mb-2">Phase 7 — Coming Soon</h4>
+            <p class="text-gray-400 text-sm mb-4">With your support, we'll help the next group of families in Varanasi realize their dream of home ownership.</p>
+            <a href="#contact" class="inline-block bg-saffron/10 text-saffron font-semibold px-5 py-2 rounded-full text-sm hover:bg-saffron/20 transition-colors border border-saffron/30">
+              Support Phase 7 ❤️
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-4">
+      <span class="text-saffron text-sm font-semibold uppercase tracking-widest">Photo Gallery</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-earth mt-2">Exhibits</h2>
+      <div class="section-divider"></div>
+      <p class="text-gray-500 text-sm">Homes built with love — Phase 1 completed homes in Mavaiya, Sarnath, Varanasi</p>
+    </div>
+
+    <!-- Main slide -->
+    <div class="relative max-w-3xl mx-auto mb-4">
+      <div id="gallery-slides" class="relative rounded-2xl overflow-hidden bg-cream h-80 sm:h-96">
+        <img id="main-gallery-img" src="images/phase1/after/After1.jpg" alt="Gallery" class="w-full h-full object-cover" onerror="this.src=''; this.parentElement.style.background='#F5E6D0'; this.style.display='none'"/>
+        <div id="slide-counter" class="absolute top-4 right-4 bg-black/40 text-white text-xs px-2 py-1 rounded-full">1 / 12</div>
+      </div>
+      <button onclick="galleryPrev()" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors text-earth font-bold">❮</button>
+      <button onclick="galleryNext()" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors text-earth font-bold">❯</button>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="max-w-3xl mx-auto grid grid-cols-6 sm:grid-cols-12 gap-2">
+      <script>
+        var galleryImages = [
+          'images/phase1/after/After1.jpg','images/phase1/after/After2.jpg','images/phase1/after/After3.jpg','images/phase1/after/After4.jpg',
+          'images/phase1/after/After5.jpg','images/phase1/after/After6.jpg','images/phase1/after/After7.jpg','images/phase1/after/After8.jpg',
+          'images/phase1/after/After9.jpg','images/phase1/after/After10.jpg','images/phase1/after/After11.jpg','images/phase1/after/After12.jpg'
+        ];
+        var currentGalleryIndex = 0;
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var thumbContainer = document.getElementById('thumb-container');
+          galleryImages.forEach(function(src, i) {
+            var img = document.createElement('img');
+            img.src = src;
+            img.alt = 'Thumbnail ' + (i+1);
+            img.className = 'w-full h-12 object-cover rounded cursor-pointer border-2 transition-all ' + (i === 0 ? 'border-saffron' : 'border-transparent hover:border-saffron/50');
+            img.id = 'thumb-' + i;
+            img.onclick = function() { setGallerySlide(i); };
+            thumbContainer.appendChild(img);
+          });
+        });
+
+        function setGallerySlide(idx) {
+          currentGalleryIndex = idx;
+          document.getElementById('main-gallery-img').src = galleryImages[idx];
+          document.getElementById('slide-counter').textContent = (idx+1) + ' / ' + galleryImages.length;
+          galleryImages.forEach(function(_, i) {
+            var t = document.getElementById('thumb-' + i);
+            if (t) t.className = t.className.replace(/border-saffron\b|border-transparent/g, i === idx ? 'border-saffron' : 'border-transparent');
+          });
+        }
+        function galleryNext() { setGallerySlide((currentGalleryIndex + 1) % galleryImages.length); }
+        function galleryPrev() { setGallerySlide((currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length); }
+      </script>
+      <div id="thumb-container" class="col-span-6 sm:col-span-12 grid grid-cols-6 sm:grid-cols-12 gap-2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="py-20 bg-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-4">
+      <span class="text-saffron text-sm font-semibold uppercase tracking-widest">Get Involved</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-earth mt-2">Contact &amp; Donate</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+
+      <!-- Donation info -->
+      <div class="space-y-6">
+        <div class="bg-gradient-to-br from-saffron to-earth rounded-2xl p-6 text-white">
+          <h3 class="font-bold text-xl mb-3">Make a Donation</h3>
+          <p class="text-white/90 text-sm mb-4">Your contribution is <strong>100% tax-deductible</strong> (501(c)(3) organization). Every dollar goes directly toward building homes for families in Varanasi.</p>
+          <p class="text-white/80 text-sm font-medium mb-2">Send a check payable to:</p>
+          <div class="bg-white/10 rounded-xl p-4 text-sm">
+            <p class="font-bold text-yellow-200">Swadesh Homes Foundation Inc</p>
+            <p>18 Haverford Road</p>
+            <p>West Windsor, NJ 08550</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-saffron/10">
+          <h4 class="font-bold text-earth mb-3">Why Your Donation Matters</h4>
+          <div class="space-y-3">
+            <div class="flex items-center space-x-3 text-sm">
+              <span class="text-2xl">🏠</span>
+              <span class="text-gray-600">A typical home costs <strong class="text-earth">~$5,000–$8,000 USD</strong> to build in Varanasi</span>
+            </div>
+            <div class="flex items-center space-x-3 text-sm">
+              <span class="text-2xl">👨‍👩‍👧‍👦</span>
+              <span class="text-gray-600">Each home houses an <strong class="text-earth">entire family</strong> — parents, children, grandparents</span>
+            </div>
+            <div class="flex items-center space-x-3 text-sm">
+              <span class="text-2xl">💯</span>
+              <span class="text-gray-600"><strong class="text-earth">100% of funds</strong> are used for construction — no administrative overhead</span>
+            </div>
+            <div class="flex items-center space-x-3 text-sm">
+              <span class="text-2xl">📜</span>
+              <span class="text-gray-600"><strong class="text-earth">Tax receipt</strong> provided for all US donations under IRS 501(c)(3)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-saffron/10">
+        <h3 class="font-bold text-earth text-xl mb-4">Send Us a Message</h3>
+        <form id="contact-form" class="space-y-4" onsubmit="submitForm(event)">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+              <input id="contact-name" type="text" placeholder="Your name" class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-saffron focus:ring-1 focus:ring-saffron transition-colors"/>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input id="contact-email" type="email" placeholder="your@email.com" class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-saffron focus:ring-1 focus:ring-saffron transition-colors"/>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Phone (optional)</label>
+            <input id="contact-phone" type="tel" placeholder="+1 (000) 000-0000" class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-saffron focus:ring-1 focus:ring-saffron transition-colors"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+            <textarea id="contact-message" rows="4" placeholder="How can we help you? Or how would you like to contribute?" class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-saffron focus:ring-1 focus:ring-saffron transition-colors resize-none"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-saffron hover:bg-saffron-dark text-white font-semibold py-3 rounded-lg transition-colors shadow-sm">
+            Send Message →
+          </button>
+          <div id="form-success" class="hidden text-center text-green-600 text-sm font-medium bg-green-50 rounded-lg py-3">
+            ✅ Message sent! We'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-earth text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-3 gap-8 mb-8">
+      <div>
+        <div class="flex items-center space-x-3 mb-3">
+          <img src="images/SwadeshHomesLogo.jpg" alt="Swadesh Homes" class="w-10 h-10 rounded-full border border-white/30"/>
+          <div>
+            <div class="font-bold">Swadesh Homes Foundation</div>
+            <div class="text-xs text-white/60">501(c)(3) Non-Profit</div>
+          </div>
+        </div>
+        <p class="text-white/70 text-sm">Building homes. Restoring dignity. Creating futures — one family at a time in Varanasi, India.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Quick Links</h4>
+        <ul class="space-y-1 text-sm text-white/70">
+          <li><a href="#mission" class="hover:text-white transition-colors">Mission</a></li>
+          <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="#impact" class="hover:text-white transition-colors">Our Impact</a></li>
+          <li><a href="#gallery" class="hover:text-white transition-colors">Gallery</a></li>
+          <li><a href="#contact" class="hover:text-white transition-colors">Contact &amp; Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Contact</h4>
+        <div class="text-sm text-white/70 space-y-1">
+          <p>Swadesh Homes Foundation Inc</p>
+          <p>18 Haverford Road</p>
+          <p>West Windsor, NJ 08550</p>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/20 pt-6 flex flex-wrap items-center justify-between gap-4">
+      <p class="text-white/60 text-sm">&copy; 2025 Swadesh Homes Foundation Inc. All rights reserved.</p>
+      <p class="text-white/40 text-xs">IRS 501(c)(3) Tax-Exempt Organization · EIN on file</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<a href="#home" id="back-top" class="fixed bottom-6 right-6 w-10 h-10 bg-saffron text-white rounded-full flex items-center justify-center shadow-lg hover:bg-saffron-dark transition-colors text-lg hidden z-40">↑</a>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+  // Mobile menu
+  function toggleMenu() {
+    var m = document.getElementById('mobile-menu');
+    m.classList.toggle('open');
+  }
+
+  // Expand/collapse phase family tables
+  function toggleExpand(id) {
+    var el = document.getElementById(id);
+    var phase = id.replace('-families','');
+    var btnText = document.getElementById(phase + '-btn-text');
+    el.classList.toggle('open');
+    if (el.classList.contains('open')) {
+      btnText.textContent = '▲ Hide Families';
+    } else {
+      btnText.textContent = '▼ View ' + phase.charAt(0).toUpperCase() + phase.slice(1) + ' Families';
+    }
+  }
+
+  // Contact form
+  function submitForm(e) {
+    e.preventDefault();
+    document.getElementById('form-success').classList.remove('hidden');
+    document.getElementById('contact-form').reset();
+    setTimeout(function() {
+      document.getElementById('form-success').classList.add('hidden');
+    }, 5000);
+  }
+
+  // Back to top button
+  window.addEventListener('scroll', function() {
+    var btn = document.getElementById('back-top');
+    if (window.scrollY > 400) {
+      btn.classList.remove('hidden');
+    } else {
+      btn.classList.add('hidden');
+    }
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
